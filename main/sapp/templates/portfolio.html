@@ -3,26 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Nethora - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Poppins', sans-serif; }
+        .navbar { background-color: #343a40; }
+        .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand { color: #f8f9fa; }
+        .portfolio-item { transition: transform 0.3s; }
+        .portfolio-item:hover { transform: scale(1.05); }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Sapp</a>
-            <div class="collapse navbar-collapse">
+            <a class="navbar-brand" href="#">Nethora</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/sapp/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/sapp/services/">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/sapp/portfolio/">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/fapp/">Go to Fapp</a></li> <!-- New Link -->
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'cart' %}">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container mt-5">
-        <h1>Our Portfolio</h1>
-        <p>Check out our portfolio of projects at Sapp.</p>
+        <h1 class="text-center mb-5">Our Portfolio</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item">
+                    <img src="https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/397551464_799231122215471_8087025735758000656_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEBHP9jxLF2g625f6_LtGNipSr_Wqb9CtOlKv9apv0K0yqMdHb1RnlqPFSnT2MeUFxhdj14dMUXiSF-iY2Bo8Hw&_nc_ohc=DwZ6PR2JOIwQ7kNvgFe9pgg&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=A0OAj7G8mIJ7QktLjKJL2Le&oh=00_AYDhlKGv9S73WLjCH9IULrLpsn547gKiUVkEkovsEKzTiw&oe=67040E1A" class="img-fluid rounded" alt="Elegant Necklace">
+                    <h3 class="mt-2">Elegant Necklace</h3>
+                    <p>This stunning necklace adds a touch of elegance to any outfit.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item">
+                    <img src="https://scontent.fmnl33-3.fna.fbcdn.net/v/t39.30808-6/397576670_799230958882154_5003460879082035520_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE-T-2tldMd9hx32D5Hm4hEUd7IRhxOK8dR3shGHE4rx97oj_ibqt2haEt2dnfjNbC9jc25Vxg4G0GQk5m0s939&_nc_ohc=GJF_h7jMyS8Q7kNvgFirreh&_nc_zt=23&_nc_ht=scontent.fmnl33-3.fna&_nc_gid=An_J79Z7lWpxdSIgKJ0Wi7v&oh=00_AYCS94Yj6Gxti7PKf9j5NL66e41FijufjLAmd4A0BMCFuA&oe=67041F2D" class="img-fluid rounded" alt="Stylish Earrings">
+                    <h3 class="mt-2">Stylish Earrings</h3>
+                    <p>Our handcrafted earrings are perfect for both casual and formal occasions.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item">
+                    <img src="https://scontent.fmnl33-1.fna.fbcdn.net/v/t39.30808-6/422591826_870518578420058_724178649538020681_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE9lvL3oE_IpF9ozE-SoaYyNwKcp-DY3-k3Apyn4Njf6RVHJRqlOLTtd0OAx7s4Bd07JsvhqsJ7OK6xf4ecUA99&_nc_ohc=Q6cHA_B2Z2UQ7kNvgGAQIpU&_nc_zt=23&_nc_ht=scontent.fmnl33-1.fna&_nc_gid=AY209lgWvFo2zY6BdEjfCdQ&oh=00_AYBSijKu9N3xiVaIU58m7l3WIAgSoqXYDhFWPgzHIMdyLQ&oe=670427EC" class="img-fluid rounded" alt="Chic Ponytail Accessory">
+                    <h3 class="mt-2">Chic Ponytail Accessory</h3>
+                    <p>Add flair to your hairstyle with our chic ponytail accessory.</p>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2022 Nethora. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
