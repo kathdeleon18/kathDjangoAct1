@@ -3,26 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fapp Home</title>
+    <title>Nethora - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; color: #212529; font-family: 'Poppins', sans-serif; }
+        .navbar { background-color: #212529 !important; }
+        .navbar-light .navbar-nav .nav-link { color: #f8f9fa; }
+        .navbar-light .navbar-brand { color: #f8f9fa; }
+        .btn-outline-light:hover { color: #212529; }
+        
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Fapp</a>
-            <div class="collapse navbar-collapse">
+            <a class="navbar-brand" href="#">Nethora</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/fapp/about/">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/fapp/contact/">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/sapp/">Go to Sapp</a></li> <!-- New Link -->
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container mt-5">
-        <h1>Welcome to Fapp Home</h1>
-        <p>This is the home page of Fapp where you can find all the latest information.</p>
+        <h1 class="text-center mb-4">Welcome to Elegance Attire</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/422684564_870518688420047_8762772515097649355_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHsVWNfPVzNzYDHiglJBNZy5LcDq84xWV7ktwOrzjFZXvD-3eUbQOxVrStZQqehULH4yAvU2PbX6kuLdS2OWSyj&_nc_ohc=FW_YDIAUm_IQ7kNvgGZN-6t&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=AdwrC0L1SZZK-qQkTVN9zUX&oh=00_AYDA_G54cH161Q116c36Eygh3ZBU2LX-f4qjA7rKiqPYFg&oe=670431D6" class="card-img-top" alt="Elegant Black Dress">
+                    <div class="card-body">
+                        <h5 class="card-title">Nethora's Ponytail</h5>
+                        <p class="card-text">Nethora’s Ponytail Accessory adds a stylish touch to your hair while keeping it secure. Perfect for casual and formal looks, it’s a must-have for any occasion.</p>
+                        <a href="#" class="btn btn-dark">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://scontent.fmnl33-1.fna.fbcdn.net/v/t39.30808-6/422590757_859941342811115_5900757270556843581_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGJsEPjYo8CeHiB5MT6_ilUmTANQKPJpMWZMA1Ao8mkxRiP0BLGA9hv1a-JvmJk4raM-a3Tf8KFNbvC8NeRfTap&_nc_ohc=C2Re5b1YiFsQ7kNvgFOxf8c&_nc_zt=23&_nc_ht=scontent.fmnl33-1.fna&_nc_gid=AhGg5Tpdnwy50xwPep0xaIu&oh=00_AYBVkjPY7MATKiLayRIUR0RpRvOhQJRdxw4GjPweHNG4sw&oe=67041151" class="card-img-top" alt="White Summer Dress">
+                    <div class="card-body">
+                        <h5 class="card-title">Nethora's Necklace</h5>
+                        <p class="card-text">The Necklace from Nethora is a simple yet elegant piece that enhances any outfit. Its timeless design makes it perfect for everyday wear or special events.</p>
+                        <a href="#" class="btn btn-dark">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/440479390_923983116406937_1400189854727663312_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEl3IY-RO3JnSYLLhVrBwK-memwQrqzO9-Z6bBCurM73-utfMAcFqa3AD05qcaGIZs2a4IUA2oRUdqaZaAXPj8O&_nc_ohc=XHoXL05PYA8Q7kNvgFqwAVa&_nc_zt=23&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=Aqz9aVDpf53Xd_rhzB4GLXV&oh=00_AYAOqRBWIMRMRU_bsxfqYbeZepG6gE7uCIM2auvA00T12A&oe=670411BB" class="card-img-top" alt="Gray Cocktail Dress">
+                    <div class="card-body">
+                        <h5 class="card-title">Nethora's Earrings</h5>
+                        <p class="card-text">Nethora’s Earrings offer a delicate sparkle that completes any look. Lightweight and versatile, they are perfect for both daily wear and special occasions.</p>
+                        <a href="#" class="btn btn-dark">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2022 Nethora. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
